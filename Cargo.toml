@@ -1,5 +1,5 @@
 [package]
-name = "rotating_lines"
+name = "daily_art"
 version = "0.1.0"
 authors = ["Francois Stephany <francois@tamere.eu>"]
 edition = "2018"
