@@ -1,10 +1,16 @@
 # Daily Nannou Sketch 
 
+
+Ideas:
+
+- Same as 2019-09-24 but with points that are moving from/to the center
+
+
 ## Run
 
 Run with:
 
-    $ cargo run 2019-09-24
+    $ cargo run --bin 2019-09-24
 
 ## Create
 
@@ -14,3 +20,4 @@ Run with:
 ## Screenshots
 
 ![24 Sept 2019](screenshots/2019-09-24.png)
+![25 Sept 2019](screenshots/2019-09-25.png)
