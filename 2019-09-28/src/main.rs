@@ -1,4 +1,5 @@
 use nannou::prelude::*;
+use rand;
 use std::vec::Vec;
 
 fn main() {
@@ -24,11 +25,12 @@ fn model(app: &App) -> Model {
     let angle_step = 2.0 * PI / (number_of_lines as f32);
 
     let mut lines = Vec::with_capacity(number_of_lines);
+    let mut rng = thread_rng();
 
     for i in 0..number_of_lines {
         lines.push(Line { 
             angle: angle_step * (i as f32),
-            length: 0.0,
+            length: rand::rng.gen_rang(0.0, max_radius),
             max_length: max_radius,
             direction: Direction::Expanding,
         });

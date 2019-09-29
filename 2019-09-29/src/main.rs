@@ -1,15 +1,14 @@
 use nannou::prelude::*;
+use rand::prelude::*;
 use std::vec::Vec;
 
 fn main() {
     nannou::app(model).update(update).run();
 }
 
-// Todo:
-// - Random length at creation 
-// - Expand/Retract mechanism
-// - Expand/Retract based on mouse position ?
-
+// Next:
+// - different speed per segment
+// - Add a rotating rectangle at the end of the line (and remove the line ?)
 
 fn model(app: &App) -> Model {
     let _window = app
@@ -24,11 +23,12 @@ fn model(app: &App) -> Model {
     let angle_step = 2.0 * PI / (number_of_lines as f32);
 
     let mut lines = Vec::with_capacity(number_of_lines);
+    let mut rng = thread_rng();
 
     for i in 0..number_of_lines {
         lines.push(Line { 
             angle: angle_step * (i as f32),
-            length: 0.0,
+            length: rng.gen_range(0.0, max_radius),
             max_length: max_radius,
             direction: Direction::Expanding,
         });

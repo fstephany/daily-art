@@ -1,5 +1,5 @@
 [package]
-name = "2019-09-28"
+name = "2019-09-29"
 version = "0.1.0"
 authors = ["Francois Stephany <francois@tamere.eu>"]
 edition = "2018"
@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 nannou = "0.11.1"
+rand = "0.7"

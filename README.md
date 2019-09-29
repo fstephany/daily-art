@@ -1,10 +1,6 @@
 # Daily Nannou Sketch 
 
-
-Ideas:
-
-- Same as 2019-09-24 but with points that are moving from/to the center
-
+Trying to get a weekly subject with super-small daily increment
 
 ## Run
 
@@ -19,6 +15,7 @@ Run with:
 
 ## Screenshots
 
-![24 Sept 2019](screenshots/2019-09-24.png)
-![25 Sept 2019](screenshots/2019-09-25.png)
+![29 Sept 2019](screenshots/2019-09-29.mkv)
 ![28 Sept 2019](screenshots/2019-09-28.mkv)
+![25 Sept 2019](screenshots/2019-09-25.png)
+![24 Sept 2019](screenshots/2019-09-24.png)
