@@ -7,10 +7,9 @@ fn main() {
 }
 
 // Todo:
-// - Random length at creation 
+// - Random length at creation
 // - Expand/Retract mechanism
 // - Expand/Retract based on mouse position ?
-
 
 fn model(app: &App) -> Model {
     let _window = app
@@ -28,7 +27,7 @@ fn model(app: &App) -> Model {
     let mut rng = thread_rng();
 
     for i in 0..number_of_lines {
-        lines.push(Line { 
+        lines.push(Line {
             angle: angle_step * (i as f32),
             length: rand::rng.gen_rang(0.0, max_radius),
             max_length: max_radius,
@@ -40,7 +39,7 @@ fn model(app: &App) -> Model {
 }
 
 enum Direction {
-    Expanding, 
+    Expanding,
     Retracting,
 }
 
@@ -48,7 +47,7 @@ struct Line {
     angle: f32, // in radian
     length: f32,
     max_length: f32,
-    direction: Direction, 
+    direction: Direction,
 }
 
 impl Line {
@@ -61,7 +60,7 @@ impl Line {
                 } else {
                     self.length += step
                 }
-            },
+            }
             Direction::Retracting => {
                 if self.length - step <= 0.0 {
                     self.length = 0.0;
@@ -76,7 +75,7 @@ impl Line {
 
 struct Model {
     _window: window::Id,
-    lines: Vec<Line>
+    lines: Vec<Line>,
 }
 
 fn update(_app: &App, model: &mut Model, _update: Update) {
@@ -92,8 +91,8 @@ fn view(app: &App, model: &Model, frame: &Frame) {
 
     for line in &model.lines {
         let endpoint = pt2(
-            line.angle.cos() * line.length, 
-            line.angle.sin() * line.length
+            line.angle.cos() * line.length,
+            line.angle.sin() * line.length,
         );
 
         draw.line()

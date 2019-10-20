@@ -34,7 +34,7 @@ fn window_event(_app: &App, _model: &mut Model, event: WindowEvent) {
         Touch(_touch) => {}
         TouchPressure(_pressure) => {}
         HoveredFile(_path) => {}
-        DroppedFile(_path) => {},
+        DroppedFile(_path) => {}
         HoveredFileCancelled => {}
         Focused => {}
         Unfocused => {}
@@ -43,7 +43,6 @@ fn window_event(_app: &App, _model: &mut Model, event: WindowEvent) {
 }
 
 fn update(_app: &App, _model: &mut Model, _update: Update) {}
-
 
 fn view(app: &App, _model: &Model, frame: &Frame) {
     let draw = app.draw();
@@ -66,10 +65,7 @@ fn view(app: &App, _model: &Model, frame: &Frame) {
         //     .end(endpoint)
         //     .color(PLUM);
 
-        draw.ellipse()
-            .xy(endpoint)
-            .radius(2.0)
-            .color(CRIMSON);
+        draw.ellipse().xy(endpoint).radius(2.0).color(CRIMSON);
     }
 
     draw.to_frame(app, &frame).unwrap();

@@ -44,8 +44,6 @@ fn window_event(_app: &App, _model: &mut Model, event: WindowEvent) {
     }
 }
 
-
-
 ////////////////////////////////
 fn view(app: &App, _model: &Model, frame: &Frame) {
     // Prepare to draw.
@@ -56,7 +54,7 @@ fn view(app: &App, _model: &Model, frame: &Frame) {
     let number_of_lines = 100;
 
     // Draw 4 lines from (0,0)
-    let step = 2.0*PI / (number_of_lines as f32);
+    let step = 2.0 * PI / (number_of_lines as f32);
 
     for x in 0..number_of_lines {
         let pos = step * (x as f32);
