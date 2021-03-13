@@ -1,5 +1,5 @@
 use nannou::prelude::*;
-use rand;
+use nannou::rand::{thread_rng, Rng};
 use std::vec::Vec;
 
 fn main() {
@@ -29,7 +29,7 @@ fn model(app: &App) -> Model {
     for i in 0..number_of_lines {
         lines.push(Line {
             angle: angle_step * (i as f32),
-            length: rand::rng.gen_rang(0.0, max_radius),
+            length: thread_rng().gen_rang(0.0, max_radius),
             max_length: max_radius,
             direction: Direction::Expanding,
         });
