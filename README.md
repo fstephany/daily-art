@@ -22,3 +22,11 @@ Run with:
 ![28 Sep 2019](screenshots/2019-09-28.mkv)
 ![25 Sep 2019](screenshots/2019-09-25.png)
 ![24 Sep 2019](screenshots/2019-09-24.png)
+
+
+
+## Snippets
+
+    // At model creation: 
+    app.set_loop_mode(LoopMode::loop_once());
+    
